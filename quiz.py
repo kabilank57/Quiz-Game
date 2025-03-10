@@ -15,7 +15,8 @@ questions = [
     {"question": "How many legs does a spider have? =", "answer": "8"},
     {"question": "What is the currency of Japan? =", "answer": "yen"},
     {"question": "Which gas do plants absorb from the atmosphere? =", "answer": "carbon dioxide"},
-    {"question": "Who discovered gravity? =", "answer": "isaac newton"}
+    {"question": "Who discovered gravity? =", "answer": "isaac Newton"}
+
 ]
 
 def kabiquiz():
@@ -31,7 +32,19 @@ def kabiquiz():
         else:
             print("SORRY this is Wrong!, The correct answer is:",i["answer"])
     
-    print(f"Quiz Completed! Your final score is {score} out of {len(questions)}")
 
-if __name__ == "__main__":
-    kabiquiz()
+    percentage = (score/len(questions)*100)
+    if(percentage >= 90):
+        print("You are A+ grade")
+    elif(percentage >= 80):
+        print("You are A grade")
+    elif(percentage >= 70):
+        print("You are B+ grade")
+    elif(percentage >= 60):
+        print("You are B grade")
+    elif(percentage >= 50):
+        print("You are C grade")
+    else:
+        print("RE")
+
+kabiquiz()
